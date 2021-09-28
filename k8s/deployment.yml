@@ -1,0 +1,26 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stocks-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stocks-api
+  template:
+    metadata:
+      labels:
+        app: stocks-api
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+        - name: api
+          image: sankovlex/octozon.stocks:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: StockDbContextSettings__ConnectionString
+              value: User ID=okteto;Password=okteto;Host=postgresql;Port=5432;Database=Stocks;Pooling=true;Connection Lifetime=0

@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FD8C203C-536F-492A-8DAF-9850474EA296}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C11D43F0-61FF-4152-9353-3EE1E56590A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocks.Api", "src\Stocks.Api\Stocks.Api.csproj", "{36020687-425E-462E-8A96-0D53AF4A777B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocks.Domain", "src\Stocks.Domain\Stocks.Domain.csproj", "{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocks.Application", "src\Stocks.Application\Stocks.Application.csproj", "{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocks.Infrastructure", "src\Stocks.Infrastructure\Stocks.Infrastructure.csproj", "{F8A9243F-009C-4E0F-8112-E2753F9EFF4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocks.Api.Tests", "tests\Stocks.Api.Tests\Stocks.Api.Tests.csproj", "{54B5BD9D-9914-49A5-B45C-389ECB3CA54A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{EA951AA2-0862-4DFA-ADC4-AF01E6CFC2EC}"
+ProjectSection(SolutionItems) = preProject
+	.gitignore = .gitignore
+	LICENSE = LICENSE
+	README.md = README.md
+	Dockerfile = Dockerfile
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{02379330-1710-49E2-ADA6-BA1A8F7869CB}"
+ProjectSection(SolutionItems) = preProject
+	k8s\deployment.yml = k8s\deployment.yml
+	k8s\service.yml = k8s\service.yml
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{33CC7A48-DB6D-4A41-88DB-E9CA9778D24A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{6F624266-8E16-4857-AB95-533F053EB520}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\dotnet-build.yml = .github\workflows\dotnet-build.yml
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36020687-425E-462E-8A96-0D53AF4A777B} = {FD8C203C-536F-492A-8DAF-9850474EA296}
+		{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B} = {FD8C203C-536F-492A-8DAF-9850474EA296}
+		{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA} = {FD8C203C-536F-492A-8DAF-9850474EA296}
+		{F8A9243F-009C-4E0F-8112-E2753F9EFF4E} = {FD8C203C-536F-492A-8DAF-9850474EA296}
+		{54B5BD9D-9914-49A5-B45C-389ECB3CA54A} = {C11D43F0-61FF-4152-9353-3EE1E56590A2}
+		{6F624266-8E16-4857-AB95-533F053EB520} = {33CC7A48-DB6D-4A41-88DB-E9CA9778D24A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2041CE7-AA9D-45C7-8504-00F485B1F993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2041CE7-AA9D-45C7-8504-00F485B1F993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36020687-425E-462E-8A96-0D53AF4A777B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36020687-425E-462E-8A96-0D53AF4A777B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36020687-425E-462E-8A96-0D53AF4A777B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36020687-425E-462E-8A96-0D53AF4A777B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66FCE7D-CDCC-4851-9FC5-8CCD8C819B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C64539C-4E9B-42FF-9F9D-613FA3F5D8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A9243F-009C-4E0F-8112-E2753F9EFF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A9243F-009C-4E0F-8112-E2753F9EFF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A9243F-009C-4E0F-8112-E2753F9EFF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A9243F-009C-4E0F-8112-E2753F9EFF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B5BD9D-9914-49A5-B45C-389ECB3CA54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B5BD9D-9914-49A5-B45C-389ECB3CA54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B5BD9D-9914-49A5-B45C-389ECB3CA54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B5BD9D-9914-49A5-B45C-389ECB3CA54A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
