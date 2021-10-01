@@ -63,7 +63,7 @@ namespace Stocks.Api
             {
                 configuration.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Octozon Stocks",
+                    Title = "Octozon Stocks v1",
                     Version = "v1"
                 });
 
@@ -81,7 +81,7 @@ namespace Stocks.Api
             {
                 configuration.SwaggerEndpoint(
                     url: "/swagger/v1/swagger.json",
-                    name: "Octozon Stocks");
+                    name: "Octozon Stocks v1");
                 configuration.RoutePrefix = "docs";
             });
             
