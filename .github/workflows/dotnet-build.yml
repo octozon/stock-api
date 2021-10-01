@@ -50,7 +50,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:0.1.14
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:0.1.15
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

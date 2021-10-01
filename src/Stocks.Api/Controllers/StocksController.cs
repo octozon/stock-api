@@ -12,13 +12,13 @@ namespace Stocks.Api.Controllers
 {
     [ApiController]
     [Route("stocks")]
-    public class StockController : ControllerBase
+    public class StocksController : ControllerBase
     {
         private readonly IMediator _mediator;
         private readonly IStockQueries _stockQueries;
 
         /// <inheritdoc />
-        public StockController(IMediator mediator, IStockQueries stockQueries)
+        public StocksController(IMediator mediator, IStockQueries stockQueries)
         {
             _mediator = mediator;
             _stockQueries = stockQueries;
