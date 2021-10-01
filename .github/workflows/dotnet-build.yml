@@ -50,7 +50,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:0.1.11
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
@@ -70,9 +70,3 @@ jobs:
         with:
           manifest: ./k8s
           namespace: sankovlex
-          
-      - name: Push changes
-        uses: okteto/push@latest
-        with:
-          namespace: sankovlex
-          name: stocks-api
