@@ -51,6 +51,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:latest
+          no-cache: true
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
