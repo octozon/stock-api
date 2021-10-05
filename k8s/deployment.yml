@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: api
-          image: sankovlex/octozon.stocks:latest
+          image: sankovlex/octozon.stocks:0.1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
