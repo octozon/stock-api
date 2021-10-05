@@ -74,5 +74,5 @@ jobs:
       - name: Okteto Kubectl Apply
         uses: okteto/apply@v4.2
         with:
-          manifest: ./k8s
+          manifest: ./k8s/okteto-pipeline.yml
           namespace: sankovlex
