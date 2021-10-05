@@ -15,7 +15,15 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: api
-          image: sankovlex/octozon.stocks:0.1.3
+          image: sankovlex/octozon.stocks:0.1.4
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
+          command: [ "/bin/sh", "-c", "cat /etc/config/config.yaml && echo && tail -f /dev/null" ]
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+        volumes:
+          - name: config-volume
+            configMap:
+              name: config-app
