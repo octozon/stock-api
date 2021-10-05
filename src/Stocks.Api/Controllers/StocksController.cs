@@ -27,7 +27,7 @@ namespace Stocks.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] PageSize pageSize, CancellationToken cancellationToken)
         {
-            PagedCollection<StockView> pagedCollection = await _stockQueries.GetAllAsync(pageSize, cancellationToken);
+            var pagedCollection = await _stockQueries.GetAllAsync(pageSize, cancellationToken);
 
             return Ok(pagedCollection);
         }
@@ -35,7 +35,7 @@ namespace Stocks.Api.Controllers
         [HttpGet("{stockId:guid}")]
         public async Task<IActionResult> Get(Guid stockId, CancellationToken cancellationToken)
         {
-            StockDetailedView stock = await _stockQueries.GetByIdAsync(stockId, cancellationToken);
+            var stock = await _stockQueries.GetByIdAsync(stockId, cancellationToken);
 
             return Ok(stock);
         }
@@ -43,7 +43,7 @@ namespace Stocks.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(CreateStockCommand command, CancellationToken cancellationToken)
         {
-            CreateStockResult result = await _mediator.Send(command, cancellationToken);
+            var result = await _mediator.Send(command, cancellationToken);
 
             return Ok(result);
         }
