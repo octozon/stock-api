@@ -23,4 +23,4 @@ spec:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
             - name: StockDbContextSettings__ConnectionString
-              value: $POSTGRES_DB
+              value: $(POSTGRES_DB)
