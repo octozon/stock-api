@@ -70,6 +70,8 @@ jobs:
 
       - name: Okteto Kubectl Apply
         uses: okteto/apply@v4.2
+        env: 
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }} 
         with:
           manifest: ./k8s
           namespace: sankovlex

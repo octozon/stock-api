@@ -23,4 +23,4 @@ spec:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
             - name: StockDbContextSettings__ConnectionString
-              value: User ID=okteto;Password=okteto;Host=postgresql;Port=5432;Database=Stocks;Pooling=true;Connection Lifetime=0
+              value: $POSTGRES_DB
