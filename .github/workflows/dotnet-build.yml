@@ -53,7 +53,10 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:0.1.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/octozon.stocks:0.1.1
+          secrets: |
+            ASPNETCORE_ENVIRONMENT=Development
+            StockDbContextSettings__ConnectionString=${{ secrets.POSTGRES_DB }}
 
       - name: Docker Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
@@ -70,8 +73,6 @@ jobs:
 
       - name: Okteto Kubectl Apply
         uses: okteto/apply@v4.2
-        env: 
-          POSTGRES_DB: ${{ secrets.POSTGRES_DB }} 
         with:
           manifest: ./k8s
           namespace: sankovlex

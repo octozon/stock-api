@@ -15,12 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: api
-          image: sankovlex/octozon.stocks:0.1.0
+          image: sankovlex/octozon.stocks:0.1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
-          env:
-            - name: ASPNETCORE_ENVIRONMENT
-              value: Development
-            - name: StockDbContextSettings__ConnectionString
-              value: $POSTGRES_DB
