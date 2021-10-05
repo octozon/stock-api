@@ -3,6 +3,6 @@ kind: Kustomization
 configMapGenerator:
   - name: config-app
     files:
-      - config.yaml
+      - config.yml
 resources:
-  - deployment.yaml
+  - deployment.yml

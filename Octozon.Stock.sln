@@ -27,6 +27,8 @@ ProjectSection(SolutionItems) = preProject
 	k8s\deployment.yml = k8s\deployment.yml
 	k8s\service.yml = k8s\service.yml
 	k8s\kustomization.yml = k8s\kustomization.yml
+	k8s\okteto-pipeline.yml = k8s\okteto-pipeline.yml
+	k8s\config.template.yml = k8s\config.template.yml
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{33CC7A48-DB6D-4A41-88DB-E9CA9778D24A}"
