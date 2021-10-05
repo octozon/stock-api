@@ -23,7 +23,7 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config
-        volumes:
-          - name: config-volume
-            configMap:
-              name: config-app
+      volumes:
+        - name: config-volume
+          configMap:
+            name: config-app
