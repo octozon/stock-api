@@ -15,7 +15,6 @@ RUN dotnet publish "./Stocks.Api/Stocks.Api.csproj" -c Release -o /out --no-rest
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
 WORKDIR /app
-EXPOSE 5000
 COPY --from=publish /out ./
 
-ENTRYPOINT ["dotnet", "Stocks.Api.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet Stocks.Api.dll
