@@ -1,9 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 
-ARG ASPNETCORE_ENVIRONMENT=Production
-ENV ASPNETCORE_ENVIRONMENT ${ASPNETCORE_ENVIRONMENT}
-
 COPY ["./src/Stocks.Api/Stocks.Api.csproj", "./Stocks.Api/"]
 COPY ["./src/Stocks.Application/Stocks.Application.csproj", "./Stocks.Application/"]
 COPY ["./src/Stocks.Domain/Stocks.Domain.csproj", "./Stocks.Domain/"]
@@ -19,5 +16,7 @@ RUN dotnet publish "./Stocks.Api/Stocks.Api.csproj" -c Release -o /out --no-rest
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
 WORKDIR /app
 COPY --from=publish /out ./
+
+ENV ASPNETCORE_ENVIRONMENT=$ASPNETCORE_ENVIRONMENT
 
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet Stocks.Api.dll
