@@ -17,6 +17,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
 WORKDIR /app
 COPY --from=publish /out ./
 
-ENV ASPNETCORE_ENVIRONMENT=$ASPNETCORE_ENVIRONMENT
-
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet Stocks.Api.dll
+
+ENV ASPNETCORE_ENVIRONMENT=$ASPNETCORE_ENVIRONMENT
