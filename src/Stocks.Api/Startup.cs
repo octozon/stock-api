@@ -74,10 +74,8 @@ namespace Stocks.Api
             });
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, StockDbContext dbContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            dbContext.Database.EnsureCreated();
-            
             app.UseSwagger();
             app.UseSwaggerUI(configuration =>
             {
