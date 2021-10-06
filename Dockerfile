@@ -1,8 +1,8 @@
-ARG ASPNETCORE_ENVIRONMENT=Production
-ENV ASPNETCORE_ENVIRONMENT ${ASPNETCORE_ENVIRONMENT}
-
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
+
+ARG ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_ENVIRONMENT ${ASPNETCORE_ENVIRONMENT}
 
 COPY ["./src/Stocks.Api/Stocks.Api.csproj", "./Stocks.Api/"]
 COPY ["./src/Stocks.Application/Stocks.Application.csproj", "./Stocks.Application/"]
